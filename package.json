@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev-back": "nodemon --watch ./backend/index.ts --exec ts-node ./backend/index.ts",
+    "dev-back": "nodemon --watch ./backend/index.ts --exec ts-node ./back/dev.ts",
     "dev-front": "parcel serve ./frontend/index.html",
     "build:front": "parcel build ./frontend/index.html",
     "build:back": "tsc",
-    "build": "yarn build:front && yarn build:back",
+    "build": "npm run build:front && npm run build:back",
     "start": "node ./backend/index.js"
   },
   "devDependencies": {
