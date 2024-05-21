@@ -5,7 +5,10 @@ import "./pages/chat.ts";
 import "./pages/signup.ts";
 import "./router";
 
-export const API_BASE_URL = "http://localhost:3000";
+export const API_BASE_URL =
+  process.env.ENVIRONMENT == "DEV"
+    ? "http://localhost:3000"
+    : "https://chatroom-xi4g.onrender.com";
 
 (function () {
   initButtonComp();
